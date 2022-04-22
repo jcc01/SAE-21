@@ -20,13 +20,13 @@ Une tâche que nous seront certainement amenés à réaliser dans un futur proch
 - Mise en place d'un peu de sécurité
 
 - Les différents accès : 
-    - les administratifs devront pouvoir accéder à internet et aux serveurs internes et externe
+    - les administratifs devront pouvoir accéder à internet et aux serveurs internes et externe
 
-    - Les commerciaux devront pouvoir accéder aux serveurs internes et externes
+    - Les commerciaux devront pouvoir accéder aux serveurs internes et externes
 
-    - Le SI doit pouvoir avoir accès à toutes les machines en SSH
+    - Le SI doit pouvoir avoir accès à toutes les machines en SSH
 
-    - Aucun message provenant de l’internet ne doit pouvoir arriver vers le LAN. Par contre, ils peuvent atteindre le serveur web externe
+    - Aucun message provenant de l’internet ne doit pouvoir arriver vers le LAN. Par contre, ils peuvent atteindre le serveur web externe
 
 
 ## Matériel et logiciel choisis : 
@@ -47,10 +47,10 @@ Premièrement, nous avons commencé par mettre en place un environnement de trav
 
 Par la suite, on a réfléchi et mis en place un plan d'adressage pour notre réseau. Ce plan est disponible dans les fichiers joint sous le nom de "Plan_Addressage.png"
 
-Pour le choix des adresse IP, nous avons choisie d'utiliser un /29 car cela permet d'adresser 6 machine ce qui est largement sufisant. Nous avons également choisie un /29 car nous sommes conscient que les adresse IP coûte chers.
+Pour le choix des adresses IP, nous avons choisie d'utiliser un /29, car cela permet d'adresser 6 machine, ce qui est largement suffisant. Nous avons également choisi un /29 car nous sommes conscients que les adresse IP coûte cher et limité.
 
 </br>
- 
+ 
 <img src="https://github.com/Abdessabourbaali/SAE21-Construire-un-reseau-informatique-pour-une-petite-structure-BAALI_RAZZAKI_CAPELLE/blob/main/SAE-21/Plan_Addressage.png" style="width: 800px">
 
 </br>
@@ -115,19 +115,12 @@ Pour commencer on active le service SSH :
 Nous avons donc sélectionné les options suivantes :
 
     ip ssh logging events
----
     ip ssh logging events
----
     ip ssh time-out 60
----
     ip ssh authentication-retries 3
----
     service password-encryption
----
-    username admin password 0  admin
----
+    username admin password 0  admin
     username admin privile 15 pass admin
----
     transport input ssh
 
 
